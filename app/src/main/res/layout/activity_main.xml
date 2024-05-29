@@ -29,9 +29,8 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonsLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.5" /> <!-- Ocupa 50% da altura da tela -->
+        app:layout_constraintHeight_percent="0.5" />
 
-    <!-- Layout para os botões na parte inferior -->
     <RelativeLayout
         android:id="@+id/buttonsLayout"
         android:layout_width="0dp"
