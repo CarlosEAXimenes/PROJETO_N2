@@ -59,6 +59,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -72,6 +73,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress" />
@@ -86,6 +88,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_telefone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
@@ -100,6 +103,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_doc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
@@ -114,6 +118,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_endereco"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress" />
@@ -145,6 +150,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_descServico"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text" />
@@ -159,6 +165,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_valor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal" />
@@ -173,6 +180,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_data"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="date" />
@@ -187,6 +195,7 @@
                     android:textColorHint="#4865AE">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_entrega"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="date" />
