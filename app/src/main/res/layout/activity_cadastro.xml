@@ -64,24 +64,9 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
-            android:id="@+id/editTextName"
+            android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="#0C62A8"
-            android:hint="Nome"
-            android:inputType="textPersonName"
-            android:padding="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editTextName"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
@@ -93,10 +78,10 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/txt_senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextEmail"
+            android:layout_below="@+id/txt_email"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
@@ -107,12 +92,27 @@
             android:textColor="@android:color/black"
             android:textColorHint="#FFFFFF" />
 
+        <EditText
+            android:id="@+id/txt_confirmarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_senha"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#0C62A8"
+            android:hint="Confirmar Senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#FFFFFF" />
+
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/btn_cadastrar"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextPassword"
+            android:layout_below="@+id/txt_confirmarSenha"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
@@ -123,10 +123,10 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/textViewSignIn"
+            android:id="@+id/lbl_fazerLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/buttonRegister"
+            android:layout_below="@+id/btn_cadastrar"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
 

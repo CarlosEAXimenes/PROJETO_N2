@@ -9,9 +9,14 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_width="404dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,9 +32,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:text="Cadastro de Ordem de Serviço"
-                android:textStyle="bold"
                 android:textColor="#173C61"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <!-- Dados do Cliente -->
             <LinearLayout
@@ -41,12 +46,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="Dados do Cliente"
                     android:textColor="#173C61"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="8dp"/>
+                    android:textSize="20sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_nomeCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nome do Cliente"
@@ -59,6 +65,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_emailCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email do Cliente"
@@ -72,6 +79,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_telefoneCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Telefone do Cliente"
@@ -85,6 +93,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_docCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CPF/CNPJ"
@@ -98,6 +107,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_enderecoCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Endereço"
@@ -122,12 +132,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="Dados da Ordem de Serviço"
                     android:textColor="#173C61"
-                    android:textSize="20sp"
-                    android:layout_marginBottom="8dp"/>
+                    android:textSize="20sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_descricaoOrdem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Descrição do Serviço"
@@ -141,6 +152,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_valorOrdem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Valor do Serviço"
@@ -154,6 +166,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_dataOrdem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Data da Ordem"
@@ -167,6 +180,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txt_dataEntrega"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Data de Entrega"
@@ -183,12 +197,14 @@
 
             <!-- Botão de Cadastro -->
             <Button
+                android:id="@+id/btn_cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="#1061A2"
                 android:text="Cadastrar"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
 
         </LinearLayout>
 

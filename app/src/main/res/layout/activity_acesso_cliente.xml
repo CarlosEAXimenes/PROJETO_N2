@@ -5,9 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_login"
-    tools:context=".Login">
-
+    tools:context=".Acesso_Cliente">
 
     <!-- Diretriz horizontal para centralização vertical -->
     <androidx.constraintlayout.widget.Guideline
@@ -15,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.37" />
+        app:layout_constraintGuide_percent="0.44" />
 
     <!-- Diretriz horizontal para deslocar formCadastro 20% para baixo -->
     <androidx.constraintlayout.widget.Guideline
@@ -31,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27" />
+        app:layout_constraintGuide_percent="0.31" />
 
     <ImageView
         android:id="@+id/imageViewTop"
@@ -47,8 +45,8 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="#FFFFFF"
+        android:text="Acesso a Área do Cliente"
+        android:textColor="#173C61"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/centerGuideline"
@@ -64,61 +62,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <EditText
-            android:id="@+id/txt_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="#0C62A8"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#36363B" />
+    <EditText
+        android:id="@+id/txt_codCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#0C62A8"
+        android:hint="Código de Acesso"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#36363B" />
 
-        <EditText
-            android:id="@+id/txt_senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_email"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="#0C62A8"
-            android:hint="Senha"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#36363B" />
 
-        <Button
-            android:id="@+id/btn_login"
-            style="@style/Widget.Material3.Button.ElevatedButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_senha"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:backgroundTint="#1061A2"
-            android:text="Login"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/lbl_fazerCadastro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_login"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-
-            android:text="Ainda não possui uma conta? Faça seu cadastro!"
-            android:textColor="#95969D"
-            android:textStyle="bold|italic" />
+    <Button
+        android:id="@+id/btn_accessar"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_codCliente"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#1061A2"
+        android:text="Acessar"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

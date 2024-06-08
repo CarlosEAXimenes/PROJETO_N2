@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
 
+
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
@@ -43,7 +44,7 @@
         android:padding="16dp">
 
         <Button
-            android:id="@+id/buttonCliente"
+            android:id="@+id/btn_cliente"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,11 +57,11 @@
             android:layout_alignParentTop="true"/>
 
         <Button
-            android:id="@+id/buttonEmpresa"
+            android:id="@+id/btn_empresa"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/buttonCliente"
+            android:layout_below="@id/btn_cliente"
             android:backgroundTint="#1061A2"
             android:text="Empresa"
             android:textAllCaps="false"
