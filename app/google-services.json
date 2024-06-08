@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "225422553659",
+    "project_id": "ordemservico-2053e",
+    "storage_bucket": "ordemservico-2053e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225422553659:android:2df800912012ab11da221e",
+        "android_client_info": {
+          "package_name": "com.example.projeto_n2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUonKUyNiT3hfCL-_vwdkGbn2tsYi1zt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
