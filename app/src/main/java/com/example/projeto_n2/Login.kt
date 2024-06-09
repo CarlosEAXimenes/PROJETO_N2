@@ -1,6 +1,5 @@
 package com.example.projeto_n2
 
-import ListaOrdem
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -36,7 +35,7 @@ class Login : AppCompatActivity() {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(email, senha)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val navTelaPrincipal = Intent(this, ListaOrdem::class.java)
+                            val navTelaPrincipal = Intent(this, ListaOrdens::class.java)
                             startActivity(navTelaPrincipal)
                         } else {
                             Toast.makeText(this, "Usuário ou senha inválidos", Toast.LENGTH_SHORT).show()
