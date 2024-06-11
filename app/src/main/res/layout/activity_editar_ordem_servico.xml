@@ -5,36 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cadastro_OrdemServico">
-
-    <!-- Toolbar com Título e Botão de Voltar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageButton
-            android:id="@+id/btn_voltar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Voltar"
-            android:src="@drawable/baseline_arrow_circle_left_24" /> <!-- Substitua por seu ícone de seta -->
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="8dp"
-            android:text="Cadastro de Ordem de Serviço"
-            android:textColor="#1061A2"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </androidx.appcompat.widget.Toolbar>
+    tools:context=".Editar_Ordem_Servico">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -45,13 +16,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:text="Editar Ordem de Serviço"
+                android:textColor="#173C61"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <!-- Dados do Cliente -->
             <LinearLayout
@@ -223,12 +206,21 @@
 
             <!-- Botão de Cadastro -->
             <Button
-                android:id="@+id/btn_cadastrar"
+                android:id="@+id/btn_salvar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#1061A2"
-                android:text="Cadastrar"
+                android:text="Salvar"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/btn_excluir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#A2103E"
+                android:text="Excluir"
                 android:textColor="@android:color/white"
                 android:textSize="20dp" />
 

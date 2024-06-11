@@ -9,13 +9,19 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -65,8 +71,8 @@ fun TopAppBarComponent(activity: ListaOrdens) { // Adicione uma referência para
         navigationIcon = {
             IconButton(onClick = { /* ação de navegação */ }) {
                 Icon(
-                    imageVector = Icons.Default.Menu,
-                    contentDescription = "Menu"
+                    imageVector = Icons.Default.AccountCircle,
+                    contentDescription = "Perfil"
                 )
             }
         },
@@ -118,15 +124,32 @@ fun InfoCard(item: InfoItem) {
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
-            Text(text = "ID da Ordem: ${item.orderId}", style = MaterialTheme.typography.titleLarge)
+            Text(text = "ID da ordem: ${item.orderId}", style = MaterialTheme.typography.titleMedium)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = "Cliente: ${item.customerName}", style = MaterialTheme.typography.bodyMedium)
             Text(text = "Descrição: ${item.orderDescription}", style = MaterialTheme.typography.bodyMedium)
-            Text(
-                text = "Data de Entrega: ${item.orderDateDelivery}",
-                style = MaterialTheme.typography.bodyMedium
-            )
+            Text(text = "Data de Entrega: ${item.orderDateDelivery}", style = MaterialTheme.typography.bodyMedium)
             Text(text = "Valor: ${item.orderPrice}", style = MaterialTheme.typography.bodyMedium)
+            Text(text = "Status: ${item.orderStatus}", style = MaterialTheme.typography.bodyMedium)
+            Spacer(modifier = Modifier.weight(1f)) // Adiciona espaço flexível
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                IconButton(onClick = { /* ação para seta para a esquerda */ }) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Seta para a esquerda"
+                    )
+                }
+                IconButton(onClick = { /* ação para seta para a direita */ }) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                        contentDescription = "Seta para a direita"
+                    )
+                }
+            }
         }
     }
 }
@@ -141,7 +164,8 @@ data class InfoItem(
     val orderDescription: String,
     val orderDateOrder: String,
     val orderDateDelivery: String,
-    val orderPrice: String
+    val orderPrice: String,
+    val orderStatus: String
 
 )
 
@@ -174,6 +198,7 @@ suspend fun fetchData(): List<InfoItem> {
                     orderDateOrder = orderData["dateOrder"].toString(),
                     orderDateDelivery = orderData["dateDelivery"].toString(),
                     orderPrice = orderData["price"].toString(),
+                    orderStatus = "A fazer" /*orderData["status"].toString()*/,
                     orderId = orderDocument.id
                 )
 
